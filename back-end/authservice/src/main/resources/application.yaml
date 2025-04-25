@@ -1,0 +1,28 @@
+server:
+  port: 8082
+jwt:
+  secret: fasdfasdfsdfsdsdffdsfdssdfaddafdsffdsasdfdfsadsfadfdsfdsadfsfdasfdasdfsasfsasdfsdasfafasdsadasfddfasdfa
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/zonaGamer
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true

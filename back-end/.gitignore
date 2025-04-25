@@ -1,0 +1,38 @@
+# Maven targets
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE - IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Logs
+*.log
+log/
+logs/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Entorno
+.env
+.env.*
+!.env.example
+application-*.yml
+!application-example.yml
+
+# Compilados
+*.class
+*.jar
+out/
+bin/ 

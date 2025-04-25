@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring.jpa.hibernate.logging.level.org.hibernate.SQL",
+      "type": "java.lang.String",
+      "description": "Description for spring.jpa.hibernate.logging.level.org.hibernate.SQL."
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "Description for jwt.secret."
+    }
+  ] }
