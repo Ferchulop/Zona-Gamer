@@ -30,6 +30,7 @@ El proyecto está dividido en dos partes principales:
 - **Java 17**
 - **PostgreSQL** 
 - **Spring Boot** 
+- **Kafka**
 
 
 ## Características
