@@ -11,9 +11,26 @@ interface SidebarProps {
   onLogout: () => void;
 }
 
+/**
+ * Componente de barra lateral navegable
+ * 
+ * Proporciona:
+ * - Navegación principal de la aplicación
+ * - Visualización de información básica del usuario
+ * - Funcionalidad para cerrar sesión
+ * - Modo expandido/contraído (responsive)
+ * 
+ * 
+ * @param {SidebarProps} props - Las propiedades del componente
+ * @returns {JSX.Element} La barra lateral con enlaces de navegación
+ */
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, user, onLogout }) => {
   const navigate = useNavigate();
 
+  /**
+   * Maneja el cierre de sesión del usuario
+   * Ejecuta la función de logout y redirige al usuario a la pantalla de login
+   */
   const handleLogout = () => {
     onLogout();
     navigate('/login');
@@ -36,6 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, user, onLogout
           isOpen ? "w-64" : "w-0 md:w-20 overflow-hidden"
         )}
       >
+        {/* Cabecera de la barra lateral con el título y botón para contraer/expandir */}
         <div className="flex items-center justify-between h-16 px-4 border-b border-sidebar-border">
           <h1 className={cn(
             "font-semibold transition-all duration-300 overflow-hidden whitespace-nowrap",
@@ -51,7 +69,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, user, onLogout
           </button>
         </div>
         
+        {/* Menú de navegación principal */}
         <nav className="flex-1 py-4 px-2 space-y-1">
+          {/* Enlace al Panel de Control */}
           <NavLink 
             to="/" 
             className={({ isActive }) => cn(
@@ -66,6 +86,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, user, onLogout
             )}>Panel de Control</span>
           </NavLink>
           
+          {/* Enlace a Lista de Juegos */}
           <NavLink 
             to="/games" 
             className={({ isActive }) => cn(
@@ -80,6 +101,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, user, onLogout
             )}>Lista de Juegos</span>
           </NavLink>
           
+          {/* Enlace a Estadísticas */}
           <NavLink 
             to="/stats" 
             className={({ isActive }) => cn(
@@ -94,6 +116,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, user, onLogout
             )}>Estadísticas</span>
           </NavLink>
           
+          {/* Enlace a Crear Juego */}
           <NavLink 
             to="/create" 
             className={({ isActive }) => cn(
@@ -109,14 +132,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, user, onLogout
           </NavLink>
         </nav>
         
+        {/* Sección de perfil y logout en la parte inferior */}
         <div className="p-4 border-t border-sidebar-border">
+          {/* Información del usuario */}
           <div className={cn(
             "flex items-center gap-3 transition-all duration-300 overflow-hidden",
             isOpen ? "opacity-100" : "opacity-0 md:opacity-100"
           )}>
+            {/* Avatar con inicial del usuario */}
             <div className="w-8 h-8 rounded-full bg-sidebar-primary flex items-center justify-center text-sidebar-primary-foreground">
               {user?.name ? user.name.charAt(0).toUpperCase() : user?.email.charAt(0).toUpperCase() || 'U'}
             </div>
+            {/* Nombre y email del usuario (visible solo cuando sidebar está expandido) */}
             <div className={isOpen ? "block" : "hidden"}>
               <p className="text-sm font-medium">{user?.name || user?.email?.split('@')[0] || 'Usuario'}</p>
               <p className="text-xs text-sidebar-foreground/70">{user?.email || 'email@ejemplo.com'}</p>
