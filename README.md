@@ -17,25 +17,20 @@ El proyecto está dividido en dos partes principales:
 - **Backend**: Microservicios en Java Spring Boot
   - `authservice`: Servicio de autenticación y gestión de usuarios
   - `game-service-api`: API para la gestión de juegos y sesiones
+  - `apache-kafka`: Middleware de mensajería para la comunicación entre microservicios
 
 ## Tecnologías
 
 ### Frontend
-- **React 18** con TypeScript
-- **Vite** como bundler y servidor de desarrollo
-- **TailwindCSS** para estilos
-- **React Router** para navegación
-- **React Hook Form** para gestión de formularios
-- **Axios** para peticiones HTTP
-- **Recharts** para visualizaciones y estadísticas
-- **JWT** para autenticación
+- **React 18**
+- **TypeScript**
+- **CSS** 
 
 ### Backend
 - **Java 17**
-- **Spring Boot** para el desarrollo de APIs
-- **Spring Security** con JWT para autenticación
-- **JPA/Hibernate** para persistencia de datos
-- **Arquitectura de Microservicios**
+- **PostgreSQL** 
+- **Spring Boot** 
+
 
 ## Características
 
