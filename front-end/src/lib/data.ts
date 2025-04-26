@@ -1,6 +1,6 @@
 import { GameStatus } from './types';
 
-// Helper to format time elapsed
+// Formatear el tiempo transcurrido
 export const formatTimeElapsed = (seconds: number): string => {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
@@ -11,7 +11,7 @@ export const formatTimeElapsed = (seconds: number): string => {
   return `${minutes}m`;
 };
 
-// Helper to get game status color
+// Obtener el color del estado del juego
 export const getStatusColor = (status: GameStatus): string => {
   switch (status) {
     case 'activo':

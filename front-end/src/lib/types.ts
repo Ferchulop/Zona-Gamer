@@ -1,14 +1,14 @@
-export type GameStatus = 'activo' | 'completado' | 'cancelado' | 'pausado';
+export type GameStatus = 'activo' | 'completado' | 'cancelado' | 'pausado'; // Estado del juego
 
 export interface Game {
-  id: number;
-  name: string;
-  status: GameStatus;
-  players: number;
-  type?: string;
-  timeElapsed?: number;
-  createdAt: Date;
-  lastUpdated: Date;
+  id: number; // ID del juego
+  name: string; // Nombre del juego
+  status: GameStatus; // Estado del juego
+  players: number; // Número de jugadores
+  type?: string; // Tipo de juego
+  timeElapsed?: number; // Tiempo transcurrido
+  createdAt: Date; // Fecha de creación
+  lastUpdated: Date; // Fecha de actualización
  
   
   userId?: number;

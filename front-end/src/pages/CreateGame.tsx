@@ -22,7 +22,7 @@ const CreateGame = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form
+    // Validar el formulario
     if (!gameName.trim()) {
       toast({
         title: "Error",
@@ -32,11 +32,11 @@ const CreateGame = () => {
       return;
     }
     
-    // Show loading state
+    // Mostrar estado de carga
     setIsSubmitting(true);
     
     try {
-      // Create new game object to send to API
+      // Crear un nuevo objeto de juego para enviar a la API
       const gameData = {
         name: gameName,
         players: parseInt(players),
@@ -49,7 +49,7 @@ const CreateGame = () => {
       
       console.log('Sending data to API:', gameData);
       
-      // Send to API
+      // Enviar a la API
       await gameService.createGame(gameData);
       
       toast({
@@ -57,10 +57,10 @@ const CreateGame = () => {
         description: `${gameName} se ha creado correctamente`,
       });
       
-      // Redirect to game list
+      // Redirigir a la lista de juegos
       navigate('/games');
     } catch (error) {
-      console.error('Error details:', error);
+      console.error('Detalles del error:', error);
       if (error.response) {
         console.error('Server response:', error.response.data);
         console.error('Status code:', error.response.status);
@@ -74,7 +74,7 @@ const CreateGame = () => {
       setIsSubmitting(false);
     }
   };
-  
+  // Componente de la página de creación de juego
   return (
     <PageTransition>
       <div className="page-container">
