@@ -1,3 +1,7 @@
+/**
+ * Componente para mostrar etiquetas o insignias informativas.
+ */
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 

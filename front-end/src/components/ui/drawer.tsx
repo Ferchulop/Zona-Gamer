@@ -1,3 +1,7 @@
+/**
+ * Componente de panel lateral deslizable.
+ */
+
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 

@@ -1,3 +1,7 @@
+/**
+ * Componente de interruptor tipo on/off para opciones booleanas.
+ */
+
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 

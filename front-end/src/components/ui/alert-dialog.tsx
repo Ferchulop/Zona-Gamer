@@ -1,3 +1,7 @@
+/**
+ * Componente de diálogo modal para confirmaciones y alertas importantes.
+ */
+
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 

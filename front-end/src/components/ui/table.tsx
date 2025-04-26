@@ -1,3 +1,7 @@
+/**
+ * Componente de tabla para mostrar datos tabulares.
+ */
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

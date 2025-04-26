@@ -1,3 +1,7 @@
+/**
+ * Componente de pestañas para mostrar contenido organizado en secciones.
+ */
+
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 

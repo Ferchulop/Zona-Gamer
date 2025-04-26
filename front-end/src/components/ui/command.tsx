@@ -1,3 +1,7 @@
+/**
+ * Componente de paleta de comandos para búsqueda y acciones rápidas.
+ */
+
 import * as React from "react"
 import { type DialogProps } from "@radix-ui/react-dialog"
 import { Command as CommandPrimitive } from "cmdk"

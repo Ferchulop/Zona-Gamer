@@ -1,3 +1,7 @@
+/**
+ * Componente de paginación para navegar a través de colecciones de datos.
+ */
+
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 

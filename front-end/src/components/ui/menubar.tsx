@@ -1,3 +1,7 @@
+/**
+ * Componente de barra de menú horizontal estilo aplicación de escritorio.
+ */
+
 import * as React from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
 import { Check, ChevronRight, Circle } from "lucide-react"

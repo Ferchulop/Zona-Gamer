@@ -1,3 +1,7 @@
+/**
+ * Componente de línea divisoria horizontal o vertical.
+ */
+
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 

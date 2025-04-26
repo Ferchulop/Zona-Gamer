@@ -1,3 +1,7 @@
+/**
+ * Componente para mostrar mensajes de alerta o notificación.
+ */
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 

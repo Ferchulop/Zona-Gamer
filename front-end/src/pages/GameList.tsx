@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PageTransition from '@/components/ui-custom/PageTransition';
 import GameCard from '@/components/ui-custom/GameCard';
-// import { gamesData, simulateStatusUpdate } from '@/lib/data'; // Comentar o eliminar esta línea
 import { Game, GameStatus } from '@/lib/types';
 import { Search, Filter, RefreshCw, Activity } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
@@ -15,7 +14,7 @@ const GameList = () => {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isLiveUpdating, setIsLiveUpdating] = useState(true); // Enabled by default
+  const [isLiveUpdating, setIsLiveUpdating] = useState(true); 
   const { toast } = useToast();
   const { hasRole } = useAuth();
   const isAdmin = hasRole('ROLE_ADMIN');

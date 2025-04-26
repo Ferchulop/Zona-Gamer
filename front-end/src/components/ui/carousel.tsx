@@ -1,3 +1,7 @@
+/**
+ * Componente de carrusel para mostrar contenido deslizable.
+ */
+
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,

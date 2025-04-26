@@ -1,3 +1,7 @@
+/**
+ * Componente de notificación toast que aparece temporalmente.
+ */
+
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"

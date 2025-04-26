@@ -1,3 +1,7 @@
+/**
+ * Componente de menú desplegable para mostrar opciones.
+ */
+
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { Check, ChevronRight, Circle } from "lucide-react"

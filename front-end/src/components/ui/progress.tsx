@@ -1,3 +1,7 @@
+/**
+ * Componente de barra de progreso para indicar estado de carga o completitud.
+ */
+
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 

@@ -1,3 +1,7 @@
+/**
+ * Componente para crear visualizaciones y gráficos de datos.
+ */
+
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 

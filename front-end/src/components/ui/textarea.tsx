@@ -1,3 +1,7 @@
+/**
+ * Componente de área de texto para entrada de texto multilínea.
+ */
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

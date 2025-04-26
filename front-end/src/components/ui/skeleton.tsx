@@ -1,3 +1,7 @@
+/**
+ * Componente de esqueleto para mostrar durante la carga de contenido.
+ */
+
 import { cn } from "@/lib/utils"
 
 function Skeleton({

@@ -1,3 +1,7 @@
+/**
+ * Componente contenedor para mostrar múltiples notificaciones toast.
+ */
+
 import { useToast } from "@/hooks/use-toast"
 import {
   Toast,

@@ -1,3 +1,7 @@
+/**
+ * Componente de grupo de botones de opción para selección única.
+ */
+
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from "lucide-react"

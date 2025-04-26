@@ -1,3 +1,7 @@
+/**
+ * Componente de barra lateral para navegación principal de la aplicación.
+ */
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"

@@ -1,3 +1,7 @@
+/**
+ * Componente de tarjeta emergente al pasar el cursor sobre un elemento.
+ */
+
 import * as React from "react"
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
 

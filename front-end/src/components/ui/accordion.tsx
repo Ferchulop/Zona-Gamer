@@ -1,3 +1,7 @@
+/**
+ * Componente de acordeón que muestra contenido expandible/colapsable.
+ */
+
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"

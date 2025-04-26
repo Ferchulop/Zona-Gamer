@@ -1,3 +1,7 @@
+/**
+ * Componente de campo de entrada de texto básico.
+ */
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
