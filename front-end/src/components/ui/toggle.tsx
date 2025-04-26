@@ -1,5 +1,5 @@
 /**
- * Componente de botón toggle que puede activarse o desactivarse.
+ * Componente de botón toggle que puede activarse o desactivarse
  */
 
 import * as React from "react"

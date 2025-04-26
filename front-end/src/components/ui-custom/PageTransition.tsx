@@ -1,3 +1,15 @@
+/**
+ * 
+ * 
+ * Componente que añade animaciones de transición suaves
+ * cuando se navega entre páginas de la aplicación. Utiliza Framer Motion
+ * para crear efectos de entrada y salida
+ * 
+ * Las animaciones incluyen:
+ * - Fade in/out (opacidad)
+ * - Movimiento vertical suave
+ * 
+ */
 
 import React from 'react';
 import { motion } from 'framer-motion';

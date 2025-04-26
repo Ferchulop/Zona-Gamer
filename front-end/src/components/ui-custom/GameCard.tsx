@@ -1,3 +1,19 @@
+/**
+ * 
+ * 
+ * Tarjeta para mostrar información detallada de un juego.
+ * Permite la gestión del estado del juego y la participación de usuarios
+ * 
+ * Funcionalidades
+ * - Muestra información básica del juego (nombre, estado, jugadores, tiempo)
+ * - Permite a los administradores cambiar el estado del juego (activo, pausado, completado, cancelado)
+ * - Permite a usuarios normales marcar un juego como completado
+ * - Proporciona botones para unirse o abandonar un juego activo
+ * - Muestra indicadores visuales según el estado actual del juego
+ * - Indica si el usuario actual está participando en el juego
+ * 
+ */
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Game, GameStatus } from '@/lib/types';
 import Card from './Card';

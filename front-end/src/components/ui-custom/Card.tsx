@@ -1,3 +1,9 @@
+/**
+ *
+ * 
+ * Componente de tarjeta personalizado que sirve como contenedor básico, muestra contenido 
+ * con bordes redondeados y sombras.
+ */
 
 import { cn } from '@/lib/utils';
 import React from 'react';

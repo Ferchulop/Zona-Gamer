@@ -1,3 +1,15 @@
+/**
+ * 
+ * Tarjeta especializada para mostrar métricas y estadísticas en dashboards.
+ * Muestra un valor principal con su etiqueta descriptiva y un indicador de
+ * cambio (positivo o negativo) con iconos visuales.
+ * 
+ * - Muestra una métrica con su etiqueta descriptiva
+ * - Incluye indicador visual de tendencia (arriba/abajo)
+ * - Colorea el cambio en verde (positivo) o rojo (negativo)
+ * - Muestra el porcentaje de cambio
+ * 
+ */
 
 import React from 'react';
 import { GameMetric } from '@/lib/types';
