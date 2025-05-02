@@ -98,7 +98,12 @@
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-actuator</artifactId>
+				<artifactId>spring-boot-starter-actuator</artifactId> <!-- Dependencia que expone endpoints de Actuator para métricas y health checks -->
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-websocket</artifactId> <!-- Dependencia que habilita soporte WebSocket/STOMP para mensajería en tiempo real -->
 			</dependency>
 	</dependencies>
 	<dependencyManagement>

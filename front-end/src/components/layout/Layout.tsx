@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '../../auth/AuthContext';
+import AdminNotifications from '../admin/AdminNotifications';
 
 /**
  * Interfaz que define las propiedades del componente Layout
@@ -26,7 +27,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Estado para controlar si la barra lateral está abierta o cerrada
   const [sidebarOpen, setSidebarOpen] = useState(true);
   // Obtener información del usuario y función de logout del contexto de autenticación
-  const { user, logout } = useAuth();
+  const { user, logout, hasRole } = useAuth();
+  const isAdmin = hasRole('ROLE_ADMIN');
   
   /**
    * Alterna el estado de la barra lateral entre abierto y cerrado
@@ -37,6 +39,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   
   return (
     <div className="flex h-screen overflow-hidden bg-background">
+      {/* Componente de notificaciones para administradores */}
+      {isAdmin && <AdminNotifications />}
+      
       {/* Componente Sidebar que recibe el estado y funciones necesarias */}
       <Sidebar 
         isOpen={sidebarOpen} 

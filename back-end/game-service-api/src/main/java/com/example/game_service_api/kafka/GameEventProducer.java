@@ -36,4 +36,13 @@ public class GameEventProducer {
             throw new RuntimeException("Error al serializar el juego a JSON", e);
         }
     }
+    
+    public void sendGameErrorReportEvent(GameErrorEvent errorEvent) {
+        try {
+            String errorJson = objectMapper.writeValueAsString(errorEvent);
+            kafkaTemplate.send("event.game-error-reported", errorEvent.getGameId().toString(), errorJson);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Error al serializar el evento de error a JSON", e);
+        }
+    }
 }

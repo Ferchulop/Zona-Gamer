@@ -145,5 +145,46 @@ export const gameService = {
       console.error('Error obteniendo participantes:', error);
       return [];
     }
+  },
+  
+  /**
+   * Reporta un problema en un juego
+   * @param gameId ID del juego
+   * @param description Descripción opcional del problema
+   */
+  reportGameError: async (gameId: string, description: string = '') => {
+    try {
+      // Obtener el ID y el nombre del usuario del localStorage
+      const userId = getUserIdFromStorage();
+      
+      // Obtener el nombre del usuario desde localStorage
+      let userName = "Usuario";
+      try {
+        const userData = localStorage.getItem('userData');
+        if (userData) {
+          const user = JSON.parse(userData);
+          userName = user.name || "Usuario";
+        }
+      } catch (error) {
+        console.error('Error al obtener el nombre de usuario:', error);
+      }
+      
+      const response = await apiClient.post(`/api/games/${gameId}/report-error`, 
+        { 
+          description,
+          userName // Enviar el nombre de usuario en el cuerpo de la solicitud
+        },
+        {
+          headers: {
+            'X-User-ID': userId,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error('Error al reportar problema:', error);
+      throw error;
+    }
   }
 }; 

@@ -1,3 +1,6 @@
+// Polyfill para SockJS - Asignar window a global para prevenir errores
+(window as any).global = window;
+
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'

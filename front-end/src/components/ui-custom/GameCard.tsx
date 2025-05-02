@@ -18,7 +18,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Game, GameStatus } from '@/lib/types';
 import Card from './Card';
 import { formatTimeElapsed, getStatusColor } from '@/lib/data';
-import { Users, Clock, MoreVertical, CheckCircle, UserPlus, UserMinus } from 'lucide-react';
+import { Users, Clock, MoreVertical, CheckCircle, UserPlus, UserMinus, XCircle, AlertTriangle } from 'lucide-react';
 import { gameService } from '@/lib/api';
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from '@/auth/AuthContext';
@@ -37,6 +37,8 @@ const GameCard: React.FC<GameCardProps> = ({ game, onStatusUpdate }) => {
   const { toast } = useToast();
   const { hasRole } = useAuth();
   const isAdmin = hasRole('ROLE_ADMIN');
+  const [isReporting, setIsReporting] = useState(false);
+  const [reportSuccess, setReportSuccess] = useState(false);
 
   // Comprobar si el usuario está participando en este juego
   useEffect(() => {
@@ -127,6 +129,47 @@ const GameCard: React.FC<GameCardProps> = ({ game, onStatusUpdate }) => {
     handleStatusChange('completado');
   };
 
+  // Función para reportar un problema en el juego (para usuarios normales)
+  const handleReportProblem = async () => {
+    setIsReporting(true);
+    setIsUpdating(true);
+    try {
+      await gameService.reportGameError(game.id.toString());
+      
+      // Mostrar efecto de éxito
+      setReportSuccess(true);
+      
+      toast({
+        title: "Problema Reportado",
+        description: "Un administrador revisará el problema pronto",
+      });
+      
+      // No cambiar el estado automáticamente, solo notificar
+      if (onStatusUpdate) {
+        onStatusUpdate();
+      }
+      
+      // Resetear el estado de éxito después de 3 segundos
+      setTimeout(() => {
+        setReportSuccess(false);
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Error al reportar problema:', error);
+      toast({
+        title: "Error",
+        description: "No se pudo reportar el problema",
+        variant: "destructive",
+      });
+    } finally {
+      setIsUpdating(false);
+      // Mantener el estado de reporte por un momento para la animación
+      setTimeout(() => {
+        setIsReporting(false);
+      }, 1000);
+    }
+  };
+
   // Función para unirse/salir del juego
   const handleParticipation = async () => {
     if (game.status !== 'activo') {
@@ -182,6 +225,13 @@ const GameCard: React.FC<GameCardProps> = ({ game, onStatusUpdate }) => {
           <div className={`${getStatusColor(game.status)} text-white text-xs px-2 py-1 rounded-full`}>
             {game.status}
           </div>
+          
+          {/* Indicador de error para juegos pausados - visible para todos los usuarios */}
+          {game.status === 'pausado' && (
+            <span className="text-red-500" title="Juego pausado por error">
+              <AlertTriangle size={16} />
+            </span>
+          )}
           
           {/* Botón de acciones - Solo visible para administradores o usuarios según el caso */}
           {isAdmin ? (
@@ -239,20 +289,43 @@ const GameCard: React.FC<GameCardProps> = ({ game, onStatusUpdate }) => {
               )}
             </>
           ) : (
-            // Botón único para usuarios normales - Solo pueden marcar como completado
-            <button
-              className={`p-1 hover:bg-gray-100 rounded-full dark:hover:bg-gray-800 ${game.status === 'completado' ? 'text-green-500' : ''} ${(game.status === 'cancelado' || game.status === 'pausado') ? 'opacity-50 cursor-not-allowed' : ''}`}
-              onClick={handleMarkAsCompleted}
-              disabled={game.status === 'completado' || game.status === 'cancelado' || game.status === 'pausado' || isUpdating}
-              title={
-                game.status === 'completado' ? 'Juego completado' : 
-                game.status === 'cancelado' ? 'No se puede completar un juego cancelado' :
-                game.status === 'pausado' ? 'No se puede completar un juego pausado' :
-                'Marcar como completado'
-              }
-            >
-              <CheckCircle size={16} />
-            </button>
+            // Botones para usuarios normales
+            <div className="flex items-center gap-1">
+              {/* Botón para reportar problema */}
+              <button
+                className={`p-1 hover:bg-gray-100 rounded-full dark:hover:bg-gray-800 ${
+                  isReporting || isUpdating ? 'opacity-50' : ''
+                } transition-all duration-300`}
+                onClick={handleReportProblem}
+                disabled={game.status === 'cancelado' || isUpdating || isReporting}
+                title="Reportar un problema"
+              >
+                <XCircle 
+                  size={16} 
+                  className={`
+                    ${game.status === 'pausado' ? 'text-red-500' : ''} 
+                    ${reportSuccess ? 'text-green-500 scale-125' : ''}
+                    ${isReporting ? 'animate-ping text-red-500' : ''}
+                    transition-all duration-300
+                  `} 
+                />
+              </button>
+              
+              {/* Botón para marcar como completado */}
+              <button
+                className={`p-1 hover:bg-gray-100 rounded-full dark:hover:bg-gray-800 ${game.status === 'completado' ? 'text-green-500' : ''} ${(game.status === 'cancelado' || game.status === 'pausado') ? 'opacity-50 cursor-not-allowed' : ''}`}
+                onClick={handleMarkAsCompleted}
+                disabled={game.status === 'completado' || game.status === 'cancelado' || game.status === 'pausado' || isUpdating}
+                title={
+                  game.status === 'completado' ? 'Juego completado' : 
+                  game.status === 'cancelado' ? 'No se puede completar un juego cancelado' :
+                  game.status === 'pausado' ? 'No se puede completar un juego pausado' :
+                  'Marcar como completado'
+                }
+              >
+                <CheckCircle size={16} />
+              </button>
+            </div>
           )}
         </div>
       </div>

@@ -7,6 +7,7 @@ import { useAuth } from '@/auth/AuthContext';
  * @property {string} requiredRole - Rol requerido para acceder a la ruta (opcional)
  */
 interface ProtectedRouteProps {
+  children?: React.ReactNode;
   requiredRole?: string;
 }
 
@@ -22,7 +23,7 @@ interface ProtectedRouteProps {
  * @param {ProtectedRouteProps} props - Propiedades que incluyen el rol requerido (opcional)
  * @returns Componente React que maneja la redirección o renderiza el contenido protegido
  */
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ requiredRole }) => {
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ requiredRole, children }) => {
   // Obtener funciones y datos de autenticación del contexto
   const { isAuthenticated, hasRole, user } = useAuth();
   // Obtener la ubicación actual para recordar dónde estaba intentando acceder el usuario
@@ -50,8 +51,8 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ requiredRole }) => {
   }
   
   // Paso 3: Si pasa todas las verificaciones, renderizar el contenido protegido
-  // El componente Outlet renderiza los elementos child de la ruta
-  return <Outlet />;
+  // Renderizar children si se proporcionan, de lo contrario usar Outlet
+  return children || <Outlet />;
 };
 
 export default ProtectedRoute;
