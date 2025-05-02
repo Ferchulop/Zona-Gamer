@@ -4,7 +4,6 @@ import { AuthProvider } from '@/auth/AuthContext';
 import ProtectedRoute from '@/auth/ProtectedRoute';
 import Layout from '@/components/layout/Layout';
 import { useAuth } from '@/auth/AuthContext';
-import TestNotification from './components/admin/TestNotification';
 
 // Páginas públicas
 import Login from '@/pages/Login';
@@ -50,19 +49,6 @@ function App() {
             <Route path="/dashboard" element={<Layout><Home /></Layout>} />
             <Route path="/create" element={<Layout><CreateGame /></Layout>} />
           </Route>
-
-          {/* Ruta de prueba para notificaciones */}
-          <Route path="/admin/test-notifications" element={
-            <ProtectedRoute requiredRole="ROLE_ADMIN">
-              <Layout>
-                <div className="p-4">
-                  <h1 className="text-2xl font-bold mb-4">Prueba de Notificaciones</h1>
-                  <TestNotification />
-                </div>
-              </Layout>
-            </ProtectedRoute>
-          } />
-
           {/* Ruta por defecto para usuarios normales */}
           <Route path="*" element={<Navigate to="/games" replace />} />
         </Routes>

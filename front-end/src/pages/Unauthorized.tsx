@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import PageTransition from '@/components/ui-custom/PageTransition';
 import { ShieldAlert } from 'lucide-react';
 import { useAuth } from '@/auth/AuthContext';
-
+/* Página de acceso denegado, muestra un mensaje de error y botones para volver al inicio o atrás */
 const Unauthorized = () => {
   const navigate = useNavigate();
   const { hasRole } = useAuth();

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
+/* Página de error 404, muestra un mensaje de error y un botón para volver al panel de control */
 const NotFound = () => {
   const location = useLocation();
 

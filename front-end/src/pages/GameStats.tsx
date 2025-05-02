@@ -8,6 +8,8 @@ import {
   Bar, Line, PieChart, Pie, Cell, Scatter, ScatterChart, CartesianGrid
 } from 'recharts';
 
+/* Página de estadísticas del juego, muestra gráficos y métricas de participación y engagement */
+
 // Colores para gráficos
 const COLORS = ['#3182ce', '#63b3ed', '#90cdf4', '#4299e1', '#22c55e', '#ef4444', '#eab308'];
 const STATUS_COLORS = {

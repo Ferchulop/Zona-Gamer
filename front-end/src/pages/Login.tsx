@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 
+/* Página de inicio de sesión, permite a los usuarios iniciar sesión en la aplicación */
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

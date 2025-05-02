@@ -7,6 +7,8 @@ import { gameService } from '@/lib/api';
 import { BarChart, BarChart2, Users, Clock, Gamepad, CheckCircle, RefreshCw, Activity } from 'lucide-react';
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip as RechartsTooltip } from 'recharts';
 
+/* Página de panel de seguimiento de juegos, muestra métricas y gráficos de los juegos activos */
+
 // Cada color representa un estado específico: activo (verde), completado (azul), pausado (amarillo), cancelado (rojo)
 const statusColors = {
   'Activo': '#22c55e',     // Verde

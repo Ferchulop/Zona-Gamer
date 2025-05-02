@@ -1,5 +1,6 @@
 import * as React from "react"
 
+/* Hook para determinar si el dispositivo es móvil */
 const MOBILE_BREAKPOINT = 768
 
 export function useIsMobile() {

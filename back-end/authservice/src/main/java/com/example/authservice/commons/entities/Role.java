@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+// Representa una entidad de rol en el sistem de autenticación, utiliza anotacion JPA para mapear la clase a una tabla
+// de la base de datos llamada "roles", incluye un identificador unico y un nombre de rol.
 public class Role {
     
     @Id

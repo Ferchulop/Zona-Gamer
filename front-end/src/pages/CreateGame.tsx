@@ -3,9 +3,9 @@ import PageTransition from '@/components/ui-custom/PageTransition';
 import Card from '@/components/ui-custom/Card';
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from 'react-router-dom';
-import { Game } from '@/lib/types';
 import { gameService } from '@/lib/api';
 
+/* Página de creación de juego, permite a los usuarios crear un nuevo juego */
 const CreateGame = () => {
   const [gameName, setGameName] = useState('');
   const [players, setPlayers] = useState('1');

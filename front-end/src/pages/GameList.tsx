@@ -6,7 +6,7 @@ import { Search, Filter, RefreshCw, Activity } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import { gameService } from '@/lib/api'; // Importar el servicio
 import { useAuth } from '@/auth/AuthContext';
-
+/* Página de lista de juegos, muestra todos los juegos activos y permite a los usuarios buscar y filtrarlos */
 const GameList = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
