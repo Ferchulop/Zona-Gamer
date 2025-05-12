@@ -78,7 +78,7 @@ const Home = () => {
     if (isLiveUpdating) {
       interval = setInterval(() => {
         fetchGames();
-      }, 5000); // Actualizar cada 5 segundos en lugar de 30
+      }, 5000); // Actualizar cada 5 segundos los intervalos de tiempo
     }
     
     return () => {
@@ -162,7 +162,7 @@ const Home = () => {
             </div>
           </div>
           
-          {/* Métricas - Ahora usando datos reales y cambios porcentuales */}
+          {/* Métricas  usando datos reales y cambios porcentuales */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <StatCard 
               metric={{
@@ -246,7 +246,7 @@ const Home = () => {
               </div>
             </Card>
             
-            {/* Juegos Populares - NUEVA SECCIÓN */}
+            {/* Juegos Populares*/}
             <Card className="lg:col-span-1">
               <h3 className="text-lg font-medium mb-4">Juegos Populares</h3>
               {isLoading ? (
