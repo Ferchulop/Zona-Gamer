@@ -1,13 +1,5 @@
 # Zona Gamer
-
-El proyecto Zona Gamer es una aplicación web diseñada para la gestión eficiente de juegos, dirigida
-tanto a administradores como a usuarios. La aplicación ofrece monitoreo en tiempo real, permitiendo
-a los administradores observar la evolución de los juegos y la actividad de los usuarios de manera
-dinámica. Con una organización centralizada, la interfaz utiliza tarjetas intuitivas que facilitan el
-seguimiento de información más importante. Además, proporciona análisis de datos detallados,
-ayudando a mejorar el desarrollo futuro de cada juego mediante tendencias y patrones de uso. La
-plataforma también permite la gestión de juegos en línea, asegurando que la experiencia sea de lo
-más reconfortante y optimizada para todos los participantes.
+El proyecto Zona Gamer es una aplicación web diseñada para permitir monitorear, lo que significa que  se puede ver cómo se comportan esos juegos en tiempo real, desde la página “Panel de Control”, analizar, desde la página “Estadísticas” y administrar desde la página “Lista de Juegos” múltiples videojuegos online simultáneamente. Los administradores pueden observar desde un panel de control detalles específicos por juego, mientras que estos reciben alertas sobre problemas técnicos que requieren atención inmediata. A la vez que podrán visualizar la evolución de cada uno de los géneros y tipos de juegos desde la página “Estadísticas”. Los jugadores podrán unirse, salir del juego, marcar como completado el juego y reportar un problema si lo hay, además de poder seguir su progreso con estadísticas.
 
 ## Estructura del Proyecto
 
