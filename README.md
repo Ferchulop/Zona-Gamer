@@ -11,7 +11,7 @@ El proyecto está dividido en dos partes principales:
   - `game-service-api`: API para la gestión de juegos y sesiones
   - `apache-kafka`: Middleware de mensajería para la comunicación entre microservicios
  
-    **Para una informacion más detallada puedes visualizar la memoria del proyecto**: TFG ZONA GAMER.pdf
+    **Para una informacion más detallada puedes visualizar la memoria del proyecto**: https://github.com/Ferchulop/Zona-Gamer/blob/17dbb3eb872ff20275f7324c26ad37e66e1a6e00/TFG%20ZONA%20GAMER.pdf
 
 ## Tecnologías
 
