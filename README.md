@@ -10,6 +10,8 @@ El proyecto está dividido en dos partes principales:
   - `authservice`: Servicio de autenticación y gestión de usuarios
   - `game-service-api`: API para la gestión de juegos y sesiones
   - `apache-kafka`: Middleware de mensajería para la comunicación entre microservicios
+ 
+    **Para una informacion más detallada puedes visualizar la memoria del proyecto**: (./TFG ZONA GAMER.pdf)
 
 ## Tecnologías
 
