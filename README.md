@@ -1,6 +1,8 @@
 # Zona Gamer
 El proyecto Zona Gamer es una aplicación web diseñada para permitir monitorear, lo que significa que  se puede ver cómo se comportan esos juegos en tiempo real, desde la página “Panel de Control”, analizar, desde la página “Estadísticas” y administrar desde la página “Lista de Juegos” múltiples videojuegos online simultáneamente. Los administradores pueden observar desde un panel de control detalles específicos por juego, mientras que estos reciben alertas sobre problemas técnicos que requieren atención inmediata. A la vez que podrán visualizar la evolución de cada uno de los géneros y tipos de juegos desde la página “Estadísticas”. Los jugadores podrán unirse, salir del juego, marcar como completado el juego y reportar un problema si lo hay, además de poder seguir su progreso con estadísticas.
 
+---
+
 ## Estructura del Proyecto
 
 El proyecto está dividido en dos partes principales:
@@ -13,6 +15,8 @@ El proyecto está dividido en dos partes principales:
  
     **Para una informacion más detallada puedes visualizar la memoria del proyecto**:
      https://github.com/Ferchulop/Zona-Gamer/blob/17dbb3eb872ff20275f7324c26ad37e66e1a6e00/TFG%20ZONA%20GAMER.pdf
+
+---
 
 ## Tecnologías
 
@@ -27,6 +31,7 @@ El proyecto está dividido en dos partes principales:
 - **Spring Boot** 
 - **Kafka**
 
+---
 
 ## Características
 
@@ -37,6 +42,8 @@ El proyecto está dividido en dos partes principales:
 - Cambio de estados de juegos (activo, pausado, completado, cancelado)
 - Interfaz responsiva y moderna
 
+---
+
 ## Instalación y Ejecución
 
 ### Requisitos previos
@@ -44,12 +51,16 @@ El proyecto está dividido en dos partes principales:
 - Java 17+
 - Maven
 
+---
+
 ### Frontend
 ```bash
 cd front-end
 npm install
 npm run dev
 ```
+
+---
 
 ### Backend
 ```bash
@@ -61,9 +72,13 @@ cd back-end/game-service-api
 ./mvnw spring-boot:run
 ```
 
+---
+
 ## Credenciales de Prueba
 - **Admin**: admin@example.com / password
 - **Usuario**: user@example.com / password
+
+---
 
 ## Desarrollo
 
