@@ -3,7 +3,7 @@ El proyecto Zona Gamer es una aplicación web diseñada para permitir monitorear
 
 ---
 
-## Estructura del Proyecto
+## Estructura del Proyecto:
 
 El proyecto está dividido en dos partes principales:
 
@@ -18,7 +18,7 @@ El proyecto está dividido en dos partes principales:
 
 ---
 
-## Tecnologías
+## Tecnologías:
 
 ### Frontend
 - **React 18**
@@ -33,7 +33,7 @@ El proyecto está dividido en dos partes principales:
 
 ---
 
-## Características
+## Características:
 
 - Sistema de autenticación con roles (usuario/administrador)
 - Creación y gestión de juegos
@@ -44,7 +44,7 @@ El proyecto está dividido en dos partes principales:
 
 ---
 
-## Instalación y Ejecución
+## Instalación y Ejecución:
 
 ### Requisitos previos
 - Node.js 16+ y npm o Bun
@@ -74,13 +74,13 @@ cd back-end/game-service-api
 
 ---
 
-## Credenciales de Prueba
+## Credenciales de Prueba:
 - **Admin**: admin@example.com / password
 - **Usuario**: user@example.com / password
 
 ---
 
-## Desarrollo
+## Desarrollo:
 
 Para contribuir al proyecto:
 
