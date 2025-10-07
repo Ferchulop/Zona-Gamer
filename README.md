@@ -80,6 +80,16 @@ cd back-end/game-service-api
 
 ---
 
+## Capturas de pantalla:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2dffd10b-6666-433e-9f7d-be40ef006141" width="500">
+  <img src="https://github.com/user-attachments/assets/b19cc405-bb4a-4121-83b0-4afbd2178b37" width="500">
+</p>
+<p align="center">
+<img src="https://github.com/user-attachments/assets/05bfc0ca-d07c-49bd-8a35-c18d07d7ce0d" width="500">
+<img src="https://github.com/user-attachments/assets/909869a9-9b5d-4488-88fb-8da5b2e59730" width="500"> 
+</p> 
+
 ## Desarrollo:
 
 Para contribuir al proyecto:
