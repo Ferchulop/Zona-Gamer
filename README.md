@@ -84,12 +84,12 @@ cd back-end/game-service-api
 <div align="center">
   <table>
     <tr>
-      <td><img src="https://github.com/user-attachments/assets/2dffd10b-6666-433e-9f7d-be40ef006141" width="500"/></td>
-      <td><img src="https://github.com/user-attachments/assets/b19cc405-bb4a-4121-83b0-4afbd2178b37" width="500"/></td>
+      <td><img src="https://github.com/user-attachments/assets/2dffd10b-6666-433e-9f7d-be40ef006141" width="700"/></td>
+      <td><img src="https://github.com/user-attachments/assets/b19cc405-bb4a-4121-83b0-4afbd2178b37" width="700"/></td>
     </tr>
     <tr>
-      <td><img src="https://github.com/user-attachments/assets/f485aba1-dcb4-42c6-a112-3d7426c68a6d" width="500"/></td>
-      <td><img src="https://github.com/user-attachments/assets/49bd9640-6629-4664-ae6f-99f734e73325" width="500"/></td>
+      <td><img src="https://github.com/user-attachments/assets/f485aba1-dcb4-42c6-a112-3d7426c68a6d" width="700"/></td>
+      <td><img src="https://github.com/user-attachments/assets/49bd9640-6629-4664-ae6f-99f734e73325" width="700"/></td>
     </tr>
   </table>
 </div>
