@@ -87,8 +87,10 @@ cd back-end/game-service-api
 </p>
 <p align="center">
 <img src="https://github.com/user-attachments/assets/05bfc0ca-d07c-49bd-8a35-c18d07d7ce0d" width="500">
-<img src="https://github.com/user-attachments/assets/909869a9-9b5d-4488-88fb-8da5b2e59730" width="500"> 
+<img src="https://github.com/user-attachments/assets/49bd9640-6629-4664-ae6f-99f734e73325" width="500"> 
 </p> 
+
+---
 
 ## Desarrollo:
 
